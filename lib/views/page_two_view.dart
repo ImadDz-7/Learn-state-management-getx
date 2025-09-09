@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:learn_getx_app/views/page_one_view.dart';
+import 'package:learn_getx_app/views/page_three_view.dart';
 
 class PageTwoView extends StatelessWidget {
   const PageTwoView({super.key});
@@ -15,36 +18,45 @@ class PageTwoView extends StatelessWidget {
           children: [
             const SizedBox(height: 65),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.offAll(const PageOneView());
+              },
+              
+              color: Colors.red,
               child: const Text(
-                'Page One',
+                'Page One (offAll)',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              color: Colors.red,
             ),
             const SizedBox(height: 15),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const PageThreeView());
+              },
+              
+              color: Colors.red,
               child: const Text(
-                'Page Two',
+                'Page Three',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              color: Colors.red,
             ),
             const SizedBox(height: 15),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.back();
+              },
+              
+              color: Colors.red,
               child: const Text(
                 'Back',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              color: Colors.red,
             ),
           ],
         ),
