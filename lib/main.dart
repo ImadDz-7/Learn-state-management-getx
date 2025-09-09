@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:learn_getx_app/views/home_view.dart';
 
 void main() {
@@ -10,7 +11,8 @@ class LearnGetxApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeView(),
     );
   }
