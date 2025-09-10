@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learn_getx_app/views/page_one_view.dart';
-import 'package:learn_getx_app/views/page_three_view.dart';
+import 'package:learn_getx_app/view/page_one_view.dart';
+import 'package:learn_getx_app/view/page_three_view.dart';
 
 class PageTwoView extends StatelessWidget {
   const PageTwoView({super.key});
