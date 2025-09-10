@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<HomeController>(
+            GetX<HomeController>(
                 init: HomeController(),
                 builder: (controller) {
                   return Row(
