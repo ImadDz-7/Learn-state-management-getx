@@ -16,58 +16,24 @@ class HomeView extends StatelessWidget {
       body: Container(
         width: double.infinity,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 65),
-            MaterialButton(
-              onPressed: () {
-                Get.to(const PageOneView());
-              },
-              color: Colors.red,
-              child: const Text(
-                'Page One',
-                style: TextStyle(
-                  color: Colors.white,
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.add),
                 ),
-              ),
-            ),
-            const SizedBox(height: 15),
-            MaterialButton(
-              onPressed: () {
-                Get.to(const PageTwoView());
-              },
-              color: Colors.red,
-              child: const Text(
-                'Page Two',
-                style: TextStyle(
-                  color: Colors.white,
+                const SizedBox(width: 15),
+                Text('0', style: TextStyle(fontSize: 28, color: Colors.red)),
+                const SizedBox(width: 15),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.remove),
                 ),
-              ),
-            ),
-            const SizedBox(height: 15),
-            MaterialButton(
-              onPressed: () {
-                Get.to(const PageThreeView());
-              },
-              color: Colors.red,
-              child: const Text(
-                'Page Three',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            const SizedBox(height: 15),
-            MaterialButton(
-              onPressed: () {
-                Get.back;
-              },
-              color: Colors.red,
-              child: const Text(
-                'Back',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
+              ],
             ),
           ],
         ),
