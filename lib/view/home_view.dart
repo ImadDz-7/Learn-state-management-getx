@@ -31,7 +31,7 @@ class HomeView extends StatelessWidget {
                       ),
                       const SizedBox(width: 25),
                       Text(
-                        '${controller.counter}',
+                        '${controller.counter.value}',
                         style: const TextStyle(
                           fontSize: 28,
                           color: Colors.red,
