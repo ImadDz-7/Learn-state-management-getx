@@ -19,34 +19,30 @@ class HomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(() {
-              return Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      controller.increment();
-                    },
-                    icon: const Icon(Icons.add),
-                  ),
-                  const SizedBox(width: 25),
-                  Text(
-                    '${controller.counter.value}',
-                    style: const TextStyle(
-                      fontSize: 28,
-                      color: Colors.red,
-                    ),
-                  ),
-                  const SizedBox(width: 25),
-                  IconButton(
-                    onPressed: () {
-                      controller.decrement();
-                    },
-                    icon: const Icon(Icons.remove),
-                  ),
-                ],
-              );
-            }),
+            MaterialButton(
+              onPressed: () {},
+              color: Colors.red,
+              child: const Text('Page One'),
+            ),
+            const SizedBox(height: 25),
+            MaterialButton(
+              onPressed: () {},
+              color: Colors.red,
+              child: const Text('Page Two'),
+            ),
+            const SizedBox(height: 25),
+            MaterialButton(
+              onPressed: () {},
+              color: Colors.red,
+              child: const Text('Page Three'),
+            ),
+            const SizedBox(height: 25),
+            MaterialButton(
+              onPressed: () {},
+              color: Colors.red,
+              child: const Text('Page Four'),
+            ),
+            const SizedBox(height: 25),
           ],
         ),
       ),
