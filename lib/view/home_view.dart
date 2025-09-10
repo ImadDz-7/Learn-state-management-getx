@@ -4,15 +4,9 @@ import 'package:learn_getx_app/view/page_one_view.dart';
 import 'package:learn_getx_app/view/page_three_view.dart';
 import 'package:learn_getx_app/view/page_two_view.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
-  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,15 +23,12 @@ class _HomeViewState extends State<HomeView> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  onPressed: () {
-                    counter++;
-                    setState(() {});
-                  },
+                  onPressed: () {},
                   icon: const Icon(Icons.add),
                 ),
                 const SizedBox(width: 25),
                 Text(
-                  '$counter',
+                  '0',
                   style: const TextStyle(
                     fontSize: 28,
                     color: Colors.red,
@@ -45,10 +36,7 @@ class _HomeViewState extends State<HomeView> {
                 ),
                 const SizedBox(width: 25),
                 IconButton(
-                  onPressed: () {
-                    counter--;
-                    setState(() {});
-                  },
+                  onPressed: () {},
                   icon: const Icon(Icons.remove),
                 ),
               ],
