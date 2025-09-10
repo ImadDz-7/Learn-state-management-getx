@@ -19,7 +19,7 @@ class PageTwoView extends StatelessWidget {
             const SizedBox(height: 65),
             MaterialButton(
               onPressed: () {
-                Get.offAll(const PageOneView());
+                Get.offAll( PageOneView());
               },
               
               color: Colors.red,
