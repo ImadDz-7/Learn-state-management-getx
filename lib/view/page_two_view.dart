@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learn_getx_app/controller/home_controller.dart';
 import 'package:learn_getx_app/view/page_one_view.dart';
 import 'package:learn_getx_app/view/page_three_view.dart';
 
@@ -15,49 +16,19 @@ class PageTwoView extends StatelessWidget {
       body: Container(
         width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 65),
-            MaterialButton(
-              onPressed: () {
-                Get.offAll( PageOneView());
-              },
-              
-              color: Colors.red,
-              child: const Text(
-                'Page One (offAll)',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+            GetBuilder<HomeController>(
+              init: HomeController(),
+              builder: (controller){
+              return Text(
+              '${controller.counter}',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 28,
               ),
-            ),
-            const SizedBox(height: 15),
-            MaterialButton(
-              onPressed: () {
-                Get.to(PageThreeView());
-              },
-              
-              color: Colors.red,
-              child: const Text(
-                'Page Three',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            const SizedBox(height: 15),
-            MaterialButton(
-              onPressed: () {
-                Get.back();
-              },
-              
-              color: Colors.red,
-              child: const Text(
-                'Back',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
+            );
+            },),
           ],
         ),
       ),

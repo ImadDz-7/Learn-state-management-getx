@@ -4,6 +4,7 @@ import 'package:learn_getx_app/controller/home_controller.dart';
 import 'package:learn_getx_app/view/page_four_view.dart';
 import 'package:learn_getx_app/view/page_one_view.dart';
 import 'package:learn_getx_app/view/page_three_view.dart';
+import 'package:learn_getx_app/view/page_two_view.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
@@ -24,21 +25,23 @@ class HomeView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                Get.to(PageOneView());
+                Get.to(() =>PageOneView());
               },
               color: Colors.red,
               child: const Text('Page One'),
             ),
             const SizedBox(height: 25),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(() => PageTwoView());
+              },
               color: Colors.red,
               child: const Text('Page Two'),
             ),
             const SizedBox(height: 25),
             MaterialButton(
               onPressed: () {
-                Get.to(PageThreeView());
+                Get.to(() => PageThreeView());
               },
               color: Colors.red,
               child: const Text('Page Three'),
