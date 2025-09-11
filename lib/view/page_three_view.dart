@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learn_getx_app/controller/rebuild_controller.dart';
+import 'package:learn_getx_app/controller/rebuild_controller2.dart';
 
 class PageThreeView extends StatelessWidget {
    PageThreeView({super.key});
 
-  RebuildController extController = Get.put(RebuildController());
+  RebuildController2 extController = Get.put(RebuildController2());
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,8 @@ class PageThreeView extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 20),
-            GetBuilder<RebuildController>(
-              init: RebuildController(),
+            GetX<RebuildController2>(
+              init: RebuildController2(),
               builder: (controller) {
                 print('Rebuild count1');
                 return Text(
@@ -29,7 +29,7 @@ class PageThreeView extends StatelessWidget {
               },
             ),
             const SizedBox(height: 20),
-            GetBuilder<RebuildController>(
+            GetX<RebuildController2>(
               builder: (controller) {
                 print('Rebuild count2');
                 return Text(
@@ -39,7 +39,7 @@ class PageThreeView extends StatelessWidget {
               },
             ),
             const SizedBox(height: 20),
-            GetBuilder<RebuildController>(
+            GetX<RebuildController2>(
               builder: (controller) {
                 print('Rebuild result');
                 return Text(

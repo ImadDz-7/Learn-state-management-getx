@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class RebuildController extends GetxController {
+class RebuildController2 extends GetxController {
   RxInt count1 = 0.obs;
   RxInt count2 = 0.obs;
 
