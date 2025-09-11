@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:learn_getx_app/controller/home_controller.dart';
 import 'package:learn_getx_app/view/page_four_view.dart';
 import 'package:learn_getx_app/view/page_one_view.dart';
+import 'package:learn_getx_app/view/page_three_view.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
@@ -36,7 +37,9 @@ class HomeView extends StatelessWidget {
             ),
             const SizedBox(height: 25),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(PageThreeView());
+              },
               color: Colors.red,
               child: const Text('Page Three'),
             ),
