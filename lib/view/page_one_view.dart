@@ -5,7 +5,7 @@ import 'package:learn_getx_app/controller/home_controller.dart';
 class PageOneView extends StatelessWidget {
   PageOneView({super.key});
 
-  var controller = Get.put(HomeController());
+  // var controller = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class PageOneView extends StatelessWidget {
             GetBuilder<HomeController>(
               init: HomeController(),
               builder: (controller) {
-                print('rebuild');
+                print('Rebuild');
                 return Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
