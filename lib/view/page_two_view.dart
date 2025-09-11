@@ -33,7 +33,7 @@ class PageTwoView extends StatelessWidget {
             const SizedBox(height: 15),
             MaterialButton(
               onPressed: () {
-                Get.to(const PageThreeView());
+                Get.to(PageThreeView());
               },
               
               color: Colors.red,

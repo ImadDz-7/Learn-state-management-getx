@@ -5,7 +5,7 @@ import 'package:learn_getx_app/controller/home_controller.dart';
 class PageOneView extends StatelessWidget {
   PageOneView({super.key});
 
-  // var controller = Get.put(HomeController());
+  HomeController controller = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -19,37 +19,37 @@ class PageOneView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<HomeController>(
-              init: HomeController(),
-              builder: (controller) {
-                print('Rebuild');
-                return Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        controller.increment();
-                      },
-                      icon: const Icon(Icons.add),
-                    ),
-                    const SizedBox(width: 25),
-                    Text(
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    controller.increment();
+                  },
+                  icon: const Icon(Icons.add),
+                ),
+                const SizedBox(width: 25),
+                GetBuilder<HomeController>(
+                  init: HomeController(),
+                  builder: (controller) {
+                    print('Rebuild');
+                    return Text(
                       '${controller.counter}',
                       style: const TextStyle(
                         fontSize: 28,
                         color: Colors.red,
                       ),
-                    ),
-                    const SizedBox(width: 25),
-                    IconButton(
-                      onPressed: () {
-                        controller.decrement();
-                      },
-                      icon: const Icon(Icons.remove),
-                    ),
-                  ],
-                );
-              },
+                    );
+                  },
+                ),
+                const SizedBox(width: 25),
+                IconButton(
+                  onPressed: () {
+                    controller.decrement();
+                  },
+                  icon: const Icon(Icons.remove),
+                ),
+              ],
             ),
           ],
         ),
