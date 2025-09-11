@@ -5,7 +5,9 @@ import 'package:learn_getx_app/view/page_one_view.dart';
 import 'package:learn_getx_app/view/page_three_view.dart';
 
 class PageTwoView extends StatelessWidget {
-  const PageTwoView({super.key});
+  PageTwoView({super.key});
+
+  final HomeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +20,13 @@ class PageTwoView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<HomeController>(
-              init: HomeController(),
-              builder: (controller){
-              return Text(
+            Text(
               '${controller.counter}',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 28,
               ),
-            );
-            },),
+            ),
           ],
         ),
       ),

@@ -5,7 +5,7 @@ import 'package:learn_getx_app/controller/home_controller.dart';
 class PageOneView extends StatelessWidget {
   PageOneView({super.key});
 
-  HomeController controller = Get.put(HomeController(), permanent: true);
+  final HomeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {

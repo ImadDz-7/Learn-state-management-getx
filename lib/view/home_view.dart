@@ -9,7 +9,7 @@ import 'package:learn_getx_app/view/page_two_view.dart';
 class HomeView extends StatelessWidget {
   HomeView({super.key});
 
-  final controller = Get.lazyPut(() => HomeController());
+  final controller = Get.lazyPut(() => HomeController(), fenix: true);
 
   @override
   Widget build(BuildContext context) {
