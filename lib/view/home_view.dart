@@ -43,7 +43,7 @@ class HomeView extends StatelessWidget {
             const SizedBox(height: 25),
             MaterialButton(
               onPressed: () {
-                Get.to(const PageFourView());
+                Get.to(PageFourView());
               },
               color: Colors.red,
               child: const Text('Page Four'),
