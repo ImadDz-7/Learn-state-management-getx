@@ -1,3 +1,5 @@
-class RebuildController{
-  
+import 'package:get/get.dart';
+
+class RebuildController extends GetxController{
+
 }
