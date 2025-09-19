@@ -12,4 +12,22 @@ class HomeController extends GetxController{
     counter--;
     update();
   }
+
+  @override
+  void onInit() {
+    print('Init HomeController');
+    super.onInit();
+  }
+
+  @override
+  void onReady() {
+    print('Ready HomeController');
+    super.onReady();
+  }
+
+  @override
+  void onClose() {
+    print('Close HomeController');
+    super.onClose();
+  }
 }
