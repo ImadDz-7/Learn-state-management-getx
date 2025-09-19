@@ -26,36 +26,36 @@ class HomeView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                Get.to(() =>PageOneView());
+                Get.offAllNamed('/');
               },
               color: Colors.red,
-              child: const Text('Page One'),
+              child: const Text('Sign out'),
             ),
-            const SizedBox(height: 25),
-            MaterialButton(
-              onPressed: () {
-                Get.to(() => PageTwoView());
-              },
-              color: Colors.red,
-              child: const Text('Page Two'),
-            ),
-            const SizedBox(height: 25),
-            MaterialButton(
-              onPressed: () {
-                Get.to(() => PageThreeView());
-              },
-              color: Colors.red,
-              child: const Text('Page Three'),
-            ),
-            const SizedBox(height: 25),
-            MaterialButton(
-              onPressed: () {
-                Get.to(PageFourView());
-              },
-              color: Colors.red,
-              child: const Text('Page Four'),
-            ),
-            const SizedBox(height: 25),
+            // const SizedBox(height: 25),
+            // MaterialButton(
+            //   onPressed: () {
+            //     Get.to(() => PageTwoView());
+            //   },
+            //   color: Colors.red,
+            //   child: const Text('Page Two'),
+            // ),
+            // const SizedBox(height: 25),
+            // MaterialButton(
+            //   onPressed: () {
+            //     Get.to(() => PageThreeView());
+            //   },
+            //   color: Colors.red,
+            //   child: const Text('Page Three'),
+            // ),
+            // const SizedBox(height: 25),
+            // MaterialButton(
+            //   onPressed: () {
+            //     Get.to(PageFourView());
+            //   },
+            //   color: Colors.red,
+            //   child: const Text('Page Four'),
+            // ),
+            // const SizedBox(height: 25),
           ],
         ),
       ),
