@@ -15,19 +15,20 @@ class HomeController extends GetxController{
 
   @override
   void onInit() {
-    print('Init HomeController');
+    // print('Init HomeController');
+    print('Fetch data');
     super.onInit();
   }
 
   @override
   void onReady() {
-    print('Ready HomeController');
+    // print('Ready HomeController');
     super.onReady();
   }
 
   @override
   void onClose() {
-    print('Close HomeController');
+    // print('Close HomeController');
     super.onClose();
   }
 }

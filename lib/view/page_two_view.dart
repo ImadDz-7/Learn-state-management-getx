@@ -11,7 +11,6 @@ class PageTwoView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('build');
     return Scaffold(
       appBar: AppBar(
         title: Text('Page Two'),

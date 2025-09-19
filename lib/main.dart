@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/home_view.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class LearnGetxApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeView(),
+      initialBinding: MyBindings(),
     );
   }
 }
