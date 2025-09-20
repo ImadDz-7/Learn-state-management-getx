@@ -4,6 +4,8 @@ import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/home_view.dart';
 import 'package:learn_getx_app/view/login_view.dart';
 
+
+
 void main() {
   runApp(const LearnGetxApp());
 }

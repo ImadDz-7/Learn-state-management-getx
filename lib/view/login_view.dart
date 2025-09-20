@@ -20,6 +20,7 @@ class LoginView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
+                
                 Get.offAllNamed('/home');
               },
               color: Colors.blue,

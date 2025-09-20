@@ -27,7 +27,7 @@ class HomeView extends StatelessWidget {
             MaterialButton(
               onPressed: () {
                 Get.offAllNamed('/');
-              },
+              }, 
               color: Colors.red,
               child: const Text('Sign out'),
             ),
