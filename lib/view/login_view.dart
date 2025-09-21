@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learn_getx_app/main.dart';
 import 'package:learn_getx_app/view/home_view.dart';
 
 class LoginView extends StatelessWidget {
@@ -20,7 +21,7 @@ class LoginView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                
+                sharepref!.setString('id', '1');
                 Get.offAllNamed('/home');
               },
               color: Colors.blue,

@@ -3,10 +3,13 @@ import 'package:get/get.dart';
 import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/home_view.dart';
 import 'package:learn_getx_app/view/login_view.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+SharedPreferences? sharepref;
 
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  sharepref = await SharedPreferences.getInstance();
   runApp(const LearnGetxApp());
 }
 
