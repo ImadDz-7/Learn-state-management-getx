@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learn_getx_app/middleware/auth_middleware.dart';
 import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/home_view.dart';
 import 'package:learn_getx_app/view/login_view.dart';
@@ -22,7 +23,11 @@ class LearnGetxApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       getPages: [
-        GetPage(name: '/', page: () => LoginView()),
+        GetPage(
+          name: '/',
+          page: () => LoginView(),
+          middlewares: [AuthMiddleWare()],
+        ),
         GetPage(name: '/home', page: () => HomeView()),
       ],
     );
