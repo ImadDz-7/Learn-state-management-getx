@@ -21,8 +21,16 @@ class LoginView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                sharepref!.setString('id', '1');
+                sharepref!.setString('role', 'user');
                 Get.offAllNamed('/home');
+              },
+              color: Colors.blue,
+              child: const Text('Login'),
+            ),
+            MaterialButton(
+              onPressed: () {
+                sharepref!.setString('role', 'admin');
+                Get.offAllNamed('/admin');
               },
               color: Colors.blue,
               child: const Text('Login'),
