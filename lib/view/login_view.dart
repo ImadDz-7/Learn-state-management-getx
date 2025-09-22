@@ -27,6 +27,7 @@ class LoginView extends StatelessWidget {
               color: Colors.blue,
               child: const Text('Login'),
             ),
+            const SizedBox(height: 20),
             MaterialButton(
               onPressed: () {
                 sharepref!.setString('role', 'admin');
