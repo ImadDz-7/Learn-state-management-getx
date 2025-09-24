@@ -34,7 +34,7 @@ class LoginView extends StatelessWidget {
                 Get.offAllNamed('/admin');
               },
               color: Colors.blue,
-              child: const Text('Login'),
+              child: const Text('Login Admin'),
             ),
           ],
         ),
