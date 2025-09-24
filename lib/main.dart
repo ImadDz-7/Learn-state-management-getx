@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learn_getx_app/middleware/auth_middleware.dart';
+import 'package:learn_getx_app/middleware/super_middleware.dart';
 import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/admin_view.dart';
 import 'package:learn_getx_app/view/home_view.dart';
@@ -28,7 +29,7 @@ class LearnGetxApp extends StatelessWidget {
         GetPage(
           name: '/',
           page: () => LoginView(),
-          middlewares: [AuthMiddleWare()],
+          middlewares: [AuthMiddleWare(), SuperMiddleWare()],
         ),
         GetPage(name: '/home', page: () => HomeView()),
         GetPage(name: '/admin', page: () => AdminView()),
