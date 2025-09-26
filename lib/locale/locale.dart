@@ -7,7 +7,7 @@ class MyLocale implements Translations{
       '1': 'الصفحة الرئيسية',
     },
     'en': {
-      '2': 'Home Page',
+      '1': 'Home Page',
     },
   };
 

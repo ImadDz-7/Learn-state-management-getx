@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( 
-        title: const Text('Home'),
+        title: Text('1'.tr),
       ),
       body: Container(
         width: double.infinity,

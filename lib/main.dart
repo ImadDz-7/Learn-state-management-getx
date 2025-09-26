@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learn_getx_app/locale/locale.dart';
 import 'package:learn_getx_app/middleware/auth_middleware.dart';
 import 'package:learn_getx_app/middleware/super_middleware.dart';
 import 'package:learn_getx_app/services/settings_services.dart';
@@ -29,12 +30,14 @@ class LearnGetxApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      translations: MyLocale(),
+      locale: Get.deviceLocale,
+      initialRoute: '/home',
       getPages: [
         GetPage(
           name: '/',
           page: () => LoginView(),
-          middlewares: [AuthMiddleWare(), SuperMiddleWare()],
+          // middlewares: [AuthMiddleWare(), SuperMiddleWare()],
         ),
         GetPage(name: '/home', page: () => HomeView()),
         GetPage(name: '/admin', page: () => AdminView()),
