@@ -14,7 +14,7 @@ SharedPreferences? sharepref;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  sharepref = await SharedPreferences.getInstance();
+  await initialServices();
   runApp(const LearnGetxApp());
 }
 
