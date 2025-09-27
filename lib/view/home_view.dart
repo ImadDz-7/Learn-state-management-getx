@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learn_getx_app/controller/home_controller.dart';
+import 'package:learn_getx_app/locale/locale_controller.dart';
 import 'package:learn_getx_app/main.dart';
 import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/page_four_view.dart';
@@ -15,6 +16,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MyLocaleController controllerLang = Get.find();
     return Scaffold(
       appBar: AppBar( 
         title: Text('1'.tr),
@@ -27,11 +29,18 @@ class HomeView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                sharepref!.clear();
-                Get.offAllNamed('/');
+                controllerLang.changeLang('ar');
               }, 
               color: Colors.red,
-              child: const Text('Sign out'),
+              child: const Text('Arabic'),
+            ),
+            const SizedBox(height: 25),
+            MaterialButton(
+              onPressed: () {
+                controllerLang.changeLang('en');
+              }, 
+              color: Colors.red,
+              child: const Text('English'),
             ),
             // const SizedBox(height: 25),
             // MaterialButton(

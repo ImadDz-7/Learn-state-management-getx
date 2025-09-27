@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learn_getx_app/locale/locale.dart';
+import 'package:learn_getx_app/locale/locale_controller.dart';
 import 'package:learn_getx_app/middleware/auth_middleware.dart';
 import 'package:learn_getx_app/middleware/super_middleware.dart';
 import 'package:learn_getx_app/services/settings_services.dart';
@@ -28,6 +29,7 @@ class LearnGetxApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(MyLocaleController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       translations: MyLocale(),
