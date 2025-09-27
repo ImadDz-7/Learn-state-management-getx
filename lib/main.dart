@@ -29,7 +29,7 @@ class LearnGetxApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(MyLocaleController());
+    MyLocaleController controller = Get.put(MyLocaleController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       translations: MyLocale(),
