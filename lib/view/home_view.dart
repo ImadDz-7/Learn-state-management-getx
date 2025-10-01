@@ -29,18 +29,10 @@ class HomeView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                controllerLang.changeLang('ar');
+                
               }, 
               color: Colors.red,
-              child: const Text('Arabic'),
-            ),
-            const SizedBox(height: 25),
-            MaterialButton(
-              onPressed: () {
-                controllerLang.changeLang('en');
-              }, 
-              color: Colors.red,
-              child: const Text('English'),
+              child: const Text('Show Dialog'),
             ),
             // const SizedBox(height: 25),
             // MaterialButton(
