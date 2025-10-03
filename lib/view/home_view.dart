@@ -29,7 +29,9 @@ class HomeView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                
+                Get.defaultDialog(
+                  
+                );
               }, 
               color: Colors.red,
               child: const Text('Show Dialog'),
