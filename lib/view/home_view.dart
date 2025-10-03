@@ -30,7 +30,13 @@ class HomeView extends StatelessWidget {
             MaterialButton(
               onPressed: () {
                 Get.defaultDialog(
-                  
+                  title: 'Warning!',
+                  titleStyle: TextStyle(
+                    color: Colors.red,
+                  ),
+                  middleText: 'Would you like to delete your account?',
+                  cancel: Text('Cancel'),
+                  confirm: Text('Confirm'),
                 );
               }, 
               color: Colors.red,
