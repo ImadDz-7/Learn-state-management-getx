@@ -18,7 +18,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     MyLocaleController controllerLang = Get.find();
     return Scaffold(
-      appBar: AppBar( 
+      appBar: AppBar(
         title: Text('1'.tr),
       ),
       body: Container(
@@ -29,8 +29,12 @@ class HomeView extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {
-                Get.snackbar('Alert', 'You have received a message!');
-              }, 
+                Get.snackbar(
+                  'Alert',
+                  'You have received a message!',
+                  snackPosition: SnackPosition.BOTTOM,
+                );
+              },
               color: Colors.red,
               child: const Text('Show Snackbar'),
             ),
