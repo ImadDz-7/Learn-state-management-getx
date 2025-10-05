@@ -30,7 +30,7 @@ class HomeView extends StatelessWidget {
             MaterialButton(
               onPressed: () {
                 Get.snackbar(
-                  'Alert',
+                  'Notification',
                   'You have received a message!',
                   snackPosition: SnackPosition.BOTTOM,
                 );
