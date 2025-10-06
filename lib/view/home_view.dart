@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:learn_getx_app/controller/home_controller.dart';
 import 'package:learn_getx_app/locale/locale_controller.dart';
 import 'package:learn_getx_app/main.dart';
+import 'package:learn_getx_app/themes.dart';
 import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/page_four_view.dart';
 import 'package:learn_getx_app/view/page_one_view.dart';
@@ -35,9 +36,9 @@ class HomeView extends StatelessWidget {
             MaterialButton(
               onPressed: () {
                 if (Get.isDarkMode) {
-                  Get.changeTheme(ThemeData.light());
+                  Get.changeTheme(Themes.customLightTheme);
                 } else {
-                  Get.changeTheme(ThemeData.dark());
+                  Get.changeTheme(Themes.customDarkTheme);
                 }
               },
               color: Colors.red,

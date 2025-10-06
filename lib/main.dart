@@ -5,6 +5,7 @@ import 'package:learn_getx_app/locale/locale_controller.dart';
 import 'package:learn_getx_app/middleware/auth_middleware.dart';
 import 'package:learn_getx_app/middleware/super_middleware.dart';
 import 'package:learn_getx_app/services/settings_services.dart';
+import 'package:learn_getx_app/themes.dart';
 import 'package:learn_getx_app/utils/my_bindings.dart';
 import 'package:learn_getx_app/view/admin_view.dart';
 import 'package:learn_getx_app/view/home_view.dart';
@@ -34,7 +35,7 @@ class LearnGetxApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       translations: MyLocale(),
       locale: Get.deviceLocale,
-      theme: ThemeData.light(),
+      theme: Themes.customLightTheme,
       initialRoute: '/home',
       getPages: [
         GetPage(
