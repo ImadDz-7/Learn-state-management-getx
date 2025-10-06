@@ -34,6 +34,7 @@ class LearnGetxApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       translations: MyLocale(),
       locale: Get.deviceLocale,
+      theme: ThemeData.light(),
       initialRoute: '/home',
       getPages: [
         GetPage(

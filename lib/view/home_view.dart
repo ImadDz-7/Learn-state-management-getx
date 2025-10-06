@@ -27,16 +27,14 @@ class HomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text('Hello', style: TextStyle(fontSize: 20),),
+            const SizedBox(height: 15),
             MaterialButton(
               onPressed: () {
-                Get.snackbar(
-                  'Notification',
-                  'You have received a message!',
-                  snackPosition: SnackPosition.BOTTOM,
-                );
+                
               },
               color: Colors.red,
-              child: const Text('Show Snackbar'),
+              child: const Text('Change theme'),
             ),
             // const SizedBox(height: 25),
             // MaterialButton(
