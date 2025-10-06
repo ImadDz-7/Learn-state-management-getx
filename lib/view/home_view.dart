@@ -27,11 +27,18 @@ class HomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Hello', style: TextStyle(fontSize: 20),),
+            const Text(
+              'Hello',
+              style: TextStyle(fontSize: 20),
+            ),
             const SizedBox(height: 15),
             MaterialButton(
               onPressed: () {
-                
+                if (Get.isDarkMode) {
+                  Get.changeTheme(ThemeData.light());
+                } else {
+                  Get.changeTheme(ThemeData.dark());
+                }
               },
               color: Colors.red,
               child: const Text('Change theme'),
